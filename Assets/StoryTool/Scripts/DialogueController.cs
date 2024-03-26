@@ -16,8 +16,9 @@ public class DialogueController : MonoBehaviour
     public List<DialogueEntry> dialogueTutorial;
     public List<DialogueEntry> dialogueStory;
 
-    public List<List<DialogueEntry>> dialoguesList;
-    
+    List<List<DialogueEntry>> dialoguesList;
+
+    public List<CharacterEntry> characterList;
 
     //UI Prefabs
     public GameObject horizontalPrefab;
@@ -29,19 +30,30 @@ public class DialogueController : MonoBehaviour
     public Button buttonOneHorizontal;
     public Button buttonOneFullscreen;
 
-    // Selected Dialogue
-    public List<DialogueEntry> selectedDialogue = new List<DialogueEntry>();
+    public Image horizontalCharacterHolder;
+    public Sprite fullscreenCharacterHolder;
+
+    public TextMeshProUGUI horizontalCharacterName;
+    public TextMeshProUGUI fullscreenCharacterName;
+
+    // Selected Dialogue & character
+    List<DialogueEntry> selectedDialogue = new List<DialogueEntry>();
+    Characters selectedCharacter;
 
     // Story Index
-    public int dialogueIndex = 0;
+    int dialogueIndex = 0;
 
     // Dialogue boolean between Fullscreen and Horizontal
-    public bool isFullscreen;
+    bool isFullscreen;
 
+    //  CHARACTER DECLARATIONS
     public enum Characters
     {
-
+        ogre,
+        lizard
     }
+
+    Characters characters;
 
     void Start()
     {
@@ -54,20 +66,18 @@ public class DialogueController : MonoBehaviour
         buttonOneFullscreen.onClick.AddListener(executeDialogue);
 
         // Select story from declared dialogue entries.
-        SelectDialogue(dialogueStory);
+        SelectDialogue(dialogueEntries);
         Debug.Log("selected dialogue: " + selectedDialogue);
 
         //  Update content at the script call
         UpdateDialogue(dialogueIndex);
 
-        CallDialogue(true, selectedDialogue);
+        CallDialogue(false, selectedDialogue);
     }
 
     public void executeDialogue()   //executeDialogue
     {
-                                                                                                        //increase story index
-                                                                                               //update story according to current index
-                //console logging for tracking issues
+                
 
         if (dialogueIndex +1 < selectedDialogue.Count)
         {
@@ -89,7 +99,7 @@ public class DialogueController : MonoBehaviour
     {
         Debug.Log("Function: UpdateDialogue has been called");
 
-       
+
         //update main text
         mainTextHorizontal.text = selectedDialogue[_dialogueIndex].text;
         mainTextFullscreen.text = selectedDialogue[_dialogueIndex].text;
@@ -97,6 +107,21 @@ public class DialogueController : MonoBehaviour
         //update button one texts
         buttonOneHorizontal.GetComponentInChildren<TextMeshProUGUI>().text = selectedDialogue[_dialogueIndex].optionOneText;
         buttonOneFullscreen.GetComponentInChildren<TextMeshProUGUI>().text = selectedDialogue[_dialogueIndex].optionOneText;
+
+        //update images & name  ====> MANUALLY ADD & EDIT IF BLOCKS FOR EACH CHARACTER
+
+        if (selectedDialogue[_dialogueIndex].character == Characters.ogre)
+        {
+            horizontalCharacterHolder.GetComponent<Image>().sprite = characterList[0].image;
+            horizontalCharacterName.GetComponent<TextMeshProUGUI>().text = characterList[0].name;
+        }
+        else if (selectedDialogue[_dialogueIndex].character == Characters.lizard)
+        {
+            horizontalCharacterHolder.GetComponentInChildren<Image>().sprite = characterList[1].image;
+            horizontalCharacterName.GetComponent<TextMeshProUGUI>().text = characterList[1].name;
+        };
+
+
         Debug.Log("Function: UpdateDialogue has been executed");
     }
 
@@ -129,10 +154,4 @@ public class DialogueController : MonoBehaviour
         Debug.Log("Function: CallDialogue has been executed");
     }
 
-}
-
-public class Character
-{
-    Sprite characterImage;
-    string name;
 }

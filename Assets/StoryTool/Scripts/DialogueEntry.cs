@@ -8,5 +8,5 @@ public class DialogueEntry
     public string text;
     public string optionOneText;
     public GameObject optionOneBlock;
-    public CharacterEntry character;
+    public DialogueController.Characters character;
 }

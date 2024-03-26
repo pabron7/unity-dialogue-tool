@@ -5,6 +5,6 @@ using System;
 public class CharacterEntry
 {
     // public ParticleSystem particleSystem;
-    public Sprite character;
     public string name;
+    public Sprite image;
 }
