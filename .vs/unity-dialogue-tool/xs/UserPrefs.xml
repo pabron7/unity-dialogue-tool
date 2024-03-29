@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{10A2A00E-D1E9-9D47-EF99-4761C5E23563}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/StoryTool/Scripts/CharacterEntry.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/StoryTool/Scripts/DialogueController.cs">
     <Files>
-      <File FileName="Assets/StoryTool/Scripts/DialogueController.cs" Line="114" Column="82" />
+      <File FileName="Assets/StoryTool/Scripts/DialogueController.cs" Line="109" Column="125" />
       <File FileName="Assets/StoryTool/Scripts/DialogueEntry.cs" Line="11" Column="5" />
-      <File FileName="Assets/StoryTool/Scripts/CharacterEntry.cs" Line="9" Column="33" />
+      <File FileName="Assets/StoryTool/Scripts/CharacterEntry.cs" Line="9" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,7 +12,7 @@
             <Node name="Assets" expanded="True">
               <Node name="StoryTool" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="CharacterEntry.cs" selected="True" />
+                  <Node name="DialogueController.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
