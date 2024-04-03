@@ -2,18 +2,16 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/StoryTool/Scripts/DialogueController.cs">
     <Files>
       <File FileName="Assets/StoryTool/Scripts/DialogueController.cs" Line="109" Column="125" />
-      <File FileName="Assets/StoryTool/Scripts/DialogueEntry.cs" Line="11" Column="5" />
-      <File FileName="Assets/StoryTool/Scripts/CharacterEntry.cs" Line="9" Column="24" />
+      <File FileName="Assets/StoryTool/Scripts/DialogueEntry.cs" />
+      <File FileName="Assets/StoryTool/Scripts/CharacterEntry.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="unity-dialogue-tool" expanded="True">
-            <Node name="Assets" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
               <Node name="StoryTool" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="DialogueController.cs" selected="True" />
-                </Node>
+                <Node name="Scripts" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -23,7 +21,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7c155086-b447-42eb-926e-8ab1f7fefa0f" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7a2dd8a7-993a-4cfb-8a7a-2c5d19cbd351" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

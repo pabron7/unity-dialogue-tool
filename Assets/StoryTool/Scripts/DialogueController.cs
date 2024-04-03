@@ -7,20 +7,21 @@ using TMPro;
 public class DialogueController : MonoBehaviour
 {
     // DECLARATIONS
-
+  
     //Entries
     //[create a new entry for each dialogue series] & when desired, call with it's specified variable name.
     Dictionary<string, List<DialogueEntry>> storyList = new Dictionary<string, List<DialogueEntry>>();
-
+    [Header("Dialogue Entries")]
     public List<DialogueEntry> dialogueEntries;
     public List<DialogueEntry> dialogueTutorial;
     public List<DialogueEntry> dialogueStory;
 
     List<List<DialogueEntry>> dialoguesList;
-
+    [Header("Characters")]
     public List<CharacterEntry> characterList;
 
     //UI Prefabs
+    [Header("Attach UI Elements")]
     public GameObject horizontalPrefab;
     public GameObject fullscreenPrefab;
 
