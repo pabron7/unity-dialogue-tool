@@ -1,6 +1,9 @@
-# DIALOGUE TOOL by Pabron
+# DIALOGUE TOOL
 
 ***
+
+###### TECHNOLOGY
+> Unity, C#
 
 A tool that helps developers create dialogues/stories in their games. 
 
